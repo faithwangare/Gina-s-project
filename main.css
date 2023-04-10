@@ -27,6 +27,7 @@ header h1 {
     flex: 1;
     background-color: plum;
     position: relative;
+    overflow:hidden;
 }
 .slide {
     position: absolute;
