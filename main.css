@@ -23,18 +23,3 @@ header h1 {
     font-size: 1rem;
 }
 
-.slideshow {
-    flex: 1;
-    background-color: plum;
-    position: relative;
-}
-.slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-}

@@ -20,7 +20,6 @@ async function loadByBreed(breed) {
     if (breed !="Choose a dog breed"){
         const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`)
         const data = await response.json()
-        console.log(data)
         createSlideShow(data.message)
     }
 
@@ -34,13 +33,12 @@ function createSlideShow(images) {
         <div class="slide" style="background-image: url('${images[1]}')"></div>
     `
     currentPosition +=2
-    setInterval(afternextSlide, 3000)
+    setInterval(nextSlide, 3000)
 
     function nextslide() {
         document.getElementById("slideshow").insertAdjacentHTML("beforeend",`<div class="slide" style="background-image: url('${images[currentPosition]}')"></div>`)
         setTimeout(function() {
             document.querySelector(".slide").remove()
-
         },1000)
 if(currentPosition +1 >=images.length) {
     currentPosition=0
